@@ -7,20 +7,20 @@ desktop-color: "#000000"
 
 terminal-font: "Terminus Regular 12"
 terminal-box: "terminal-*.png"
-terminal-left: "8"
-terminal-top: "8"
-terminal-width: "100%-16"
-terminal-height: "100%-16"
+terminal-left: "15%"
+terminal-top: "15%"
+terminal-width: "70%"
+terminal-height: "70%"
 terminal-border: "8"
 
 # message with the "press enter to boot" stuff, I assume
 + label {
 	top = 100%-16
 	left = 0
-	width = 100%
+	width = 80%
 	height = 16
 	text = "@KEYMAP_MIDDLE@"
-	align = "center"
+	align = "left"
 	font = "Terminus Regular 12"
 	color = "#009f00"
 }
@@ -45,5 +45,20 @@ terminal-border: "8"
 	scrollbar_width = 16
 	scrollbar_thumb = "scrollbar-*.png"
 	menu_pixmap_style = "menu-*.png"
+}
+
+# "timeout in" box
++ progress_bar {
+	id = "__timeout__"
+	left = 80%
+	top = 100%-16
+	width = 20%
+	height = 16
+	text = "Boot in %ds"
+	align = "center"
+	font = "Terminus Regular 12"
+	color = "#000000"
+	fg_color = "#ffbf00"
+	bg_color = "#009f00"
 }
 
