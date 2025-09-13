@@ -1,0 +1,49 @@
+# SPO GRUB2 Theme
+
+title-text: ""
+
+desktop-image: "SPO-logo-1080-small.png"
+desktop-color: "#000000"
+
+terminal-font: "Terminus Regular 12"
+terminal-box: "terminal-*.png"
+terminal-left: "8"
+terminal-top: "8"
+terminal-width: "100%-16"
+terminal-height: "100%-16"
+terminal-border: "8"
+
+# message with the "press enter to boot" stuff, I assume
++ label {
+	top = 100%-16
+	left = 0
+	width = 100%
+	height = 16
+	text = "@KEYMAP_MIDDLE@"
+	align = "center"
+	font = "Terminus Regular 12"
+	color = "#009f00"
+}
+
+# the actual menu
++ boot_menu {
+	left = 0
+	top = 0
+	width = 100%
+	height = 100%-16
+	item_font = "Terminus Regular 12"
+	item_color = "#009f00"
+	item_height = 32
+	item_padding = 8
+	item_spacing = 16
+	selected_item_pixmap_style = "select-*.png"
+	icon_width = 16
+	icon_height = 16
+	item_icon_space = 32
+	selected_item_color = "#ffbf00"
+	scrollbar = true
+	scrollbar_width = 16
+	scrollbar_thumb = "scrollbar-*.png"
+	menu_pixmap_style = "menu-*.png"
+}
+
