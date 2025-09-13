@@ -33,13 +33,13 @@ terminal-border: "8"
 	height = 100%-16
 	item_font = "Terminus Regular 12"
 	item_color = "#009f00"
-	item_height = 32
-	item_padding = 8
+	item_height = 20
+	item_padding = 2
 	item_spacing = 16
 	selected_item_pixmap_style = "select-*.png"
 	icon_width = 16
 	icon_height = 16
-	item_icon_space = 32
+	item_icon_space = 24
 	selected_item_color = "#ffbf00"
 	scrollbar = true
 	scrollbar_width = 16
