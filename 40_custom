@@ -4,7 +4,7 @@ exec tail -n +3 $0
 # menu entries you want to add after this comment.  Be careful not to change
 # the 'exec tail' line above.
 
-menuentry "Shutdown" {
+menuentry "Shutdown Now" {
 	echo "Shutting down..."
 	halt
 }
@@ -13,4 +13,11 @@ menuentry "Reboot" {
 	echo "Rebooting..."
 	reboot
 }
+
+if [ ${grub_platform} == "efi" ]; then
+	menuentry "Reboot with EFI_OS_INDICATIONS_BOOT_TO_FW_UI" --id "uefi-firmware" {
+		echo "Rebooting with EFI_OS_INDICATIONS_BOOT_TO_FW_UI..."
+		fwsetup
+	}
+fi
 
