@@ -19,5 +19,10 @@ if [ ${grub_platform} == "efi" ]; then
 		echo "Rebooting with EFI_OS_INDICATIONS_BOOT_TO_FW_UI..."
 		fwsetup
 	}
+else
+	menuentry "Reboot with EFI_OS_INDICATIONS_BOOT_TO_FW_UI (Not Available)" --id "uefi-firmware" {
+		echo "Fallback: Rebooting"
+		reboot
+	}
 fi
 
